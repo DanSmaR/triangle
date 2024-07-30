@@ -11,4 +11,9 @@ class TestTriangle < Minitest::Test
     triangle = TriangleFactory.create_triangle('scalene', side1: 3, side2: 5, side3: 6)
     assert_in_delta 18.3, triangle.area, 0.1
   end
+
+  def test_isosceles_triangle_area
+    triangle = TriangleFactory.create_triangle('isosceles', base: 10, height: 8)
+    assert_in_delta 40.0, triangle.area, 0.1
+  end
 end
